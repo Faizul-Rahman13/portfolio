@@ -305,6 +305,19 @@ function launchRocket(el) {
 
 //   New Script
 
+// LOCK THE INSPECT OPTION IN BROWSER START
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+ document.onkeydown = function(e) {
+   if (e.keyCode == 123 || // F12
+       (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) || // Ctrl+Shift+I/J
+        (e.ctrlKey && e.keyCode == 85)) { // Ctrl+U
+        return false;
+    }
+ }
+
+
+// LOCK THE INSPECT OPTION IN BROWSER END 
 
 
 
